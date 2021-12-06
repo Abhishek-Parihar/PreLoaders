@@ -74,7 +74,7 @@ body {
     justify-content: center;
     flex-direction: column;
     perspective: 1300px;
-    animation: 1s infinite linear .63s thumbAnimation;
+    animation: 2s infinite linear 1s thumbAnimation;
     transform-origin: bottom;
 }
 
@@ -87,35 +87,6 @@ body {
     bottom: 10px;
 }
 
-.nail1 {
-    animation: 1s linear infinite nailAnimation;
-}
-.nail2 {
-    animation: 1s linear infinite 0.125s nailAnimation;
-}
-.nail3 {
-    animation: 1s linear infinite .25s nailAnimation;
-}
-.nail4 {
-    animation: 1s linear infinite .375s nailAnimation;
-}
-
-.finger1 {
-    animation: 1s infinite linear fingerup1;
-    z-index: 2;
-}
-.finger2 {
-    animation: 1s infinite linear .125s fingerup2;
-    z-index: 2;
-}
-.finger3 {
-    animation: 1s infinite linear .25s fingerup3;
-    z-index: 2;
-}
-.finger4 {
-    animation: 1s infinite linear .375s fingerup2;
-    z-index: 2;
-}
 .mark {
     position: relative;
     top: 20px;
@@ -128,16 +99,45 @@ body {
     
 }
 .mark1{
-    animation: 1s infinite linear markUp;
+    animation: 2s infinite ease-out markUp;
 }
 .mark2{
-    animation: 1s infinite linear .125s markUp;
+    animation: 2s infinite ease-out .2s markUp;
 }
 .mark3{
-    animation: 1s infinite linear .25s markUp;
+    animation: 2s infinite ease-out .4s markUp;
 }
 .mark4{
-    animation: 1s infinite linear .375s markUp;
+    animation: 2s infinite ease-out .6s markUp;
+}
+.nail1 {
+    animation: 2s ease-out infinite nailAnimation;
+}
+.nail2 {
+    animation: 2s ease-out infinite 0.2s nailAnimation;
+}
+.nail3 {
+    animation: 2s ease-out infinite .4s nailAnimation;
+}
+.nail4 {
+    animation: 2s ease-out infinite .6s nailAnimation;
+}
+
+.finger1 {
+    animation: 2s infinite ease-out fingerup1;
+    z-index: 2;
+}
+.finger2 {
+    animation: 2s infinite ease-out .2s fingerup2;
+    z-index: 2;
+}
+.finger3 {
+    animation: 2s infinite ease-out .4s fingerup3;
+    z-index: 2;
+}
+.finger4 {
+    animation: 2s infinite ease-out .6s fingerup2;
+    z-index: 2;
 }
 
 
@@ -160,7 +160,7 @@ body {
         transform: translateY(0) scale3d(1,1,1);
     }
     20%{
-        transform: translateY(-4rem) scale3d(1,.8,1);
+        transform: translateY(-2rem) scale3d(1,.8,1);
     }
     40%{
         transform: translateY(0rem) scale3d(1,1,1);
@@ -174,7 +174,7 @@ body {
         transform: translateY(0) scale3d(1,1,1);
     }
     20%{
-        transform: translateY(-2rem) scale3d(1,.8,1);
+        transform: translateY(-1rem) scale3d(1,.8,1);
     }
     40%{
         transform: translateY(0rem) scale3d(1,1,1);
@@ -287,6 +287,9 @@ h1::after {
 @keyframes type{
     from{
         left : 0%;
+    }
+    10%{
+        left: 0%;
     }
     80%{
         left: 100%;
