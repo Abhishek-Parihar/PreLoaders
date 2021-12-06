@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #4492f4;
+    z-index: 2;
+    gap: 10rem;
+}
+
+.Animation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.line {
+    width: 0.6rem;
+    height: 100%;
+    z-index: 3;
+    background-color: #4492f4;
+}
+
+.fingers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+
+}
+
+.finger{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 6rem;
+    height: 17rem;
+    background-color: #fff;
+    border-radius: 35px;
+    transform-origin: top;
+}
+
+.marks{
+    width: 3.5rem;
+    height: .7rem;
+    background-color: #4492f4;
+}
+
+
+.finger2 {
+    height: 20rem;
+}
+.finger3 {
+    height: 23rem;
+}
+.finger4 {
+    height: 20rem;  
+}
+.thumb1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    perspective: 1300px;
+    animation: 1s infinite linear .63s thumbAnimation;
+    transform-origin: bottom;
+}
+
+.nail {
+    background-color: #4492f4;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50% 50% 35% 35% ;
+    position: relative;
+    bottom: 10px;
+}
+
+.nail1 {
+    animation: 1s linear infinite nailAnimation;
+}
+.nail2 {
+    animation: 1s linear infinite 0.125s nailAnimation;
+}
+.nail3 {
+    animation: 1s linear infinite .25s nailAnimation;
+}
+.nail4 {
+    animation: 1s linear infinite .375s nailAnimation;
+}
+
+.finger1 {
+    animation: 1s infinite linear fingerup1;
+    z-index: 2;
+}
+.finger2 {
+    animation: 1s infinite linear .125s fingerup2;
+    z-index: 2;
+}
+.finger3 {
+    animation: 1s infinite linear .25s fingerup3;
+    z-index: 2;
+}
+.finger4 {
+    animation: 1s infinite linear .375s fingerup2;
+    z-index: 2;
+}
+.mark {
+    position: relative;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    position: relative;
+    
+}
+.mark1{
+    animation: 1s infinite linear markUp;
+}
+.mark2{
+    animation: 1s infinite linear .125s markUp;
+}
+.mark3{
+    animation: 1s infinite linear .25s markUp;
+}
+.mark4{
+    animation: 1s infinite linear .375s markUp;
+}
+
+
+@keyframes markUp {
+    from{
+        transform:  translate(0rem, 0rem);
+    }
+    20% {
+        transform: translate(0rem, -2rem);
+    }
+    40%{
+        transform:  translate(0rem, 0rem);
+    }
+    100%{
+        transform:  translate(0rem, 0rem);
+    }
+}
+@keyframes fingerup1 {
+    from{
+        transform: translateY(0) scale3d(1,1,1);
+    }
+    20%{
+        transform: translateY(-4rem) scale3d(1,.8,1);
+    }
+    40%{
+        transform: translateY(0rem) scale3d(1,1,1);
+    }
+    to{
+        transform: translateY(0rem);
+    }
+}
+@keyframes fingerup2 {
+    from{
+        transform: translateY(0) scale3d(1,1,1);
+    }
+    20%{
+        transform: translateY(-2rem) scale3d(1,.8,1);
+    }
+    40%{
+        transform: translateY(0rem) scale3d(1,1,1);
+    }
+    to{
+        transform: translateY(0rem);
+    }
+}
+@keyframes fingerup3 {
+    from{
+        transform: scale3d(1,1,1);
+    }
+    20%{
+        transform: scale3d(1,.8,1);
+    }
+    40%{
+        transform: scale3d(1,1,1);
+    }
+    to{
+        transform: scale3d(1,1,1);
+    }
+}
+
+@keyframes nailAnimation {
+    from{
+        transform: translate(0rem,0rem) ;
+    }
+    20%{
+        transform: translate(0rem, -2rem);
+    }
+    40%{
+        transform: translate(0rem, 0rem) ;
+    }
+    to{
+        transform: translate(0rem, 0rem);
+    }
+}
+.thumb {
+    height: 11vh;
+    width: 7vw;
+    background-color: #fff;
+    border-radius: 0 20% 60% 0;
+    transform-origin: left;
+    z-index: 1;
+}
+.part1 {
+    position: relative;
+    top: 46px;
+    background-color: #4492f4;
+    /* background-color: aqua; */
+    width: 7vw;
+    height: 7.5vh;
+    border-radius: 0% 0% 0% 70%;
+}
+.screen{
+    width: 3.5vw;
+    height: 5vh;
+    background-color: #fff;
+    /* background-color: #ddd; */
+}
+
+@keyframes thumbAnimation {
+    from{
+        transform : translate(0rem,0rem) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1rem , -1rem) rotate(-20deg);
+    }
+    20%{
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
+    to{
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
+}
+
+h1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+    position: relative;
+    width: max-content;
+    color: #fff;
+}
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1::before{
+    content: "";
+    background-color: #4492f4;
+    animation: type 10s steps(27) infinite forwards;
+}
+
+h1::after {
+    content: '';
+    width: .06em;
+    background-color: black;
+    animation:
+        blink 500ms infinite forwards, 
+        type 10s steps(27) infinite forwards;
+}
+
+@keyframes type{
+    from{
+        left : 0%;
+    }
+    80%{
+        left: 100%;
+    }
+    90%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+
+}
+
+@keyframes blink {
+    from{
+        opacity: 0%;
+    }
+}
